@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="./css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="./css/styles.css" rel="stylesheet" type="text/css">
+  <script src="./js/jquery-1.11.1.js"></script>
+  <script src="./js/scripts.js"></script>
+  <title>Tamagotchi</title>
+</head>
+
+<body>
+<div class="container">
+  <h1>Tamagotchi</h1><br>
+  
+  <div class="col-md-4">
+    <span class="asleep-or-awake"><h6></h6><img class='photo-width' src='./img/char0.png' alt='Picture of character'></span>
+    <form id="form-to-disappear">
+      <br>
+      <div class="form-group">
+       <input type="date" id="tamagotchi-birthday"  class="form-control" >
+      </div> <!-- form-group 1 -->
+      <button type="submit" class="btn btn-success">Create My Tamagotchi</button>
+    </form>
+    <div id="show-name-birthday">
+      <h2><span class="tamagotchi-name"></span></h2>
+      <h5>Birthday: <span class="tamagotchi-birthday"><span></h5>
+      <br><br>
+      <button type="reset" id="reset-button" class="btn btn-danger" onClick="window.location.reload()">Restart Tamagotchi</button>
+    </div>
+  </div> <!-- col-md-4 -->
+  <div class="col-md-1">
+  </div> <!-- col-md-1 spacer -->
+  <div class="col-md-6">
+    <button id="feed" type="button" class="threeD-button"><img src="./img/food-button.png" class="button-photo-width"></button>
+    <button id="play" type="button" class="threeD-button"><img src="./img/play-button.png" class="button-photo-width"></button>
+    <button id="put-to-bed" type="button" class="threeD-button"><img src="./img/bed-button.jpg" class="button-photo-width"></button>
+    <button id="medicine" type="button" class="threeD-button"><img src="./img/medicine-button.png" class="button-photo-width"></button>
+    <br><br><br><br>
+    <div id="range-area">
+    <br><br><br><br>
+    <div id="meter-area">
+      <label for="food-level">Food Level</label>
+      <span class="food-meter"><meter value="" min="-1" low="4" high="8" optimum="10" max="15"></meter>
+        </span><br><br>
+      <label for="happiness-level">Happiness Level</label>
+      <span class="happiness-meter"><meter value="" min="-1" low="4" high="8" optimum="10" max="15"></meter>
+        </span><br><br>
+      <label for="rested-level">Rest Level</label>
+      <span class="rested-meter"><meter value="" min="-1" low="4" high="8" optimum="10" max="15"></meter>
+        </span><br><br>
+      <label for="health-level">Health Level</label>
+      <span class="health-meter"><meter value="" min="-1" low="4" high="8" optimum="10" max="15"></meter>
+        </span><br>
+    </div> <!-- meter-area -->
+    <br><br>
+    <div class="alert">
+      <h5><span class="alert-msg"></span></h5>
+    </div><!--end alert div-->
+
+  </div> <!-- col-md-6 -->
+</div> <!-- row -->
+
+</div> <!-- container -->
+</body>
+</html>

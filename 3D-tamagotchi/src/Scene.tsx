@@ -5,7 +5,9 @@ import {Body} from "./Body"
 import {Button_left} from "./Button_left"
 import {Button_right} from "./Button_right"
 import {Button_middle} from "./Button_middle"
-import { CameraControls, Float , ContactShadows} from '@react-three/drei';
+import Screen from "./Screen"
+
+import { CameraControls, Float , ContactShadows, Html} from '@react-three/drei';
 
 
 
@@ -24,6 +26,9 @@ function ThreeScene(){
             floatingRange={[0.1, 0.6]}>
 
            <Body/>
+           <Html scale={1} transform occlude>
+                <iframe src="screen.html" />
+          </Html>
            
 
            <Button_left/>
