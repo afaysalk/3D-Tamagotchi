@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+3D-tamagotci/node_modules
 dist
 dist-ssr
 *.local
