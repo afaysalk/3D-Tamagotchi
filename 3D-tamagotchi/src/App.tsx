@@ -8,11 +8,12 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <h1 className="App h-screen"></h1>
+    <div className="App h-screen" style={{ width: "100vw", height: "100vh" }}>
       <ThreeScene/>
     </div>
   )
 }
+
+
 
 export default App
