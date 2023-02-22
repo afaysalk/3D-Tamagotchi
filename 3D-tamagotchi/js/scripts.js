@@ -141,7 +141,7 @@ var Tamagotchi = {
       $(".asleep-or-awake").html("<img src='./img/bird-awake.png' class='photo-width'>");
     };
 
-    $(".food-meter").html("<img src='./img/char0.png' class='svg-"+this.foodBar+"'</img>");
+    $(".food-meter").html("<svg xmlns='http://www.w3.org/2000/svg' class='svg-"+this.foodBar+"'> <path d='M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z' fill='currentColor'/></svg>");
     $(".happiness-meter").html("<meter value=" + this.happinessLevel + " min='-1' low='4' high='8' optimum='10' max='15'></meter>");
     $(".rested-meter").html("<meter value=" + this.restedLevel + " min='-1' low='3' high='8' optimum='10' max='15'></meter>");
     this.healthLevel = this.calcHealthLevel();

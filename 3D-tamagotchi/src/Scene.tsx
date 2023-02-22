@@ -34,7 +34,7 @@ function ThreeScene(){
             </group>  
            
 
-           <Button_left/>
+           <Button_left onClick={(e) => console.log('click')} />
            <Button_middle/>
            <Button_right/>
 

@@ -102,21 +102,19 @@ svg{
 }
 
 .svg-max {
-  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%)!important ; 
-
-  
+  color: blue !important;
   }
   
 
 .svg-optimum {
-  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%)!important ;
+color: green !important;
 }
 .svg-high {
-  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%)!important ;
+  color: yellow !important;
   }
 
 .svg-low {
-  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%)!important ;
+    color: red !important;
     }
 
 
