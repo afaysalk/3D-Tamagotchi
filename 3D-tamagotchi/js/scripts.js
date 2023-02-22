@@ -12,12 +12,9 @@ var Tamagotchi = {
   },
 
   calcHealthLevel: function () {
-    var tempHealthLevel = (this.foodLevel + this.happinessLevel + this.restedLevel) / 3;
-    if ((this.healthLevel >= 15) && (tempHealthLevel >= 15)) {
-      return 15;
-    } else {
-      return ((tempHealthLevel + this.healthLevel)/2);
-    };
+  
+      return this.healthLevel;
+    
   },
 
 // Action functions - need buttons

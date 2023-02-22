@@ -1,6 +1,6 @@
 import {Canvas, useFrame} from "@react-three/fiber"
 import {useRef} from "react"
-import {Mesh} from "three"
+import {Group, Mesh} from "three"
 import {Body} from "./Body"
 import {Button_left} from "./Button_left"
 import {Button_right} from "./Button_right"
@@ -15,20 +15,23 @@ function ThreeScene(){
     const cameraControlRef = useRef<CameraControls | null>(null);
     return (
         
-        <Canvas>
-            <CameraControls ref={cameraControlRef} />
+        <Canvas camera={{ position: [0, 0, 30]}} >
+            
+            <CameraControls ref={cameraControlRef}  />
            <ambientLight />
-           <pointLight position={[5, 5, 5]}/>
+           <pointLight position={[30, 30, 30]}/>
            <Float
             speed={1}
             rotationIntensity={1} 
             floatIntensity={1} 
-            floatingRange={[0.1, 0.6]}>
-
+            floatingRange={[1, 6]}>
+              
            <Body/>
-           <Html scale={1} transform occlude>
-                <iframe src="screen.html" />
+           <group rotation={[-0.1,0,0]}>
+           <Html scale={1} transform occlude position={[0, -0.6, 3]}>
+                <iframe src="screen.html" style= {{ width: 700, height: 640}}/>
           </Html>
+            </group>  
            
 
            <Button_left/>

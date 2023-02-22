@@ -20,7 +20,7 @@ type GLTFResult = GLTF & {
 export function Body(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/device/body.glb') as GLTFResult
   return (
-    <group {...props} dispose={null} scale={30}>
+    <group {...props} dispose={null} scale={300}>
       <mesh geometry={nodes.Osidinum_Tama.geometry} material={materials['Material.010']} position={[0, -0.07, -0.03]} rotation={[1.95, 0, 0]} scale={0.01} />
     </group>
   )
