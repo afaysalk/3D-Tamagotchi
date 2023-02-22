@@ -9,6 +9,10 @@ var Tamagotchi = {
     this.happinessLevel = 10;
     this.restedLevel = 10;
     this.healthLevel = 10;
+    this.foodBar = "optimum";
+    this.happinessBar = "optimum";
+    this.restedBar = "optimum";
+    this.healthBar = "optimum";
   },
 
   calcHealthLevel: function () {
@@ -89,6 +93,22 @@ var Tamagotchi = {
 
 // Time passes
 
+
+  bar: function(level) {
+    if   (level<4)  
+    return "low"
+    else if   (level<8)
+    return "high"
+    else if   (level<10)
+    return "optimum"
+    else  if (level<15)
+    return  "max"
+  
+  
+  
+  },  
+
+
   timePasses: function (intervalID) {
     if (this.isSleeping) {
       if (this.restedLevel < 15) {
@@ -100,6 +120,7 @@ var Tamagotchi = {
     } else { // is awake
       if (this.foodLevel > 0) {
         this.foodLevel--;
+        this.foodBar=this.bar(this.foodLevel)
       };
       if (this.restedLevel > 0) {
         this.restedLevel--;
@@ -115,12 +136,12 @@ var Tamagotchi = {
   setTamagotchiMeters: function (intervalID) {
 
     if (this.isSleeping) {
-      $(".asleep-or-awake").html("<img class='photo-width' src='./img/char0.png' alt='Picture of character'>")
+      $(".asleep-or-awake").html("<img src='./img/bird-asleep.png' class='photo-width'>");
     } else {
-      $(".asleep-or-awake").html("<img class='photo-width' src='./img/char.png' alt='Picture of character'>")
+      $(".asleep-or-awake").html("<img src='./img/bird-awake.png' class='photo-width'>");
     };
 
-    $(".food-meter").html("<meter value=" + this.foodLevel + " min='-1' low='3' high='8' optimum='10' max='15'></meter>");
+    $(".food-meter").html("<img src='./img/char0.png' class='svg-"+this.foodBar+"'</img>");
     $(".happiness-meter").html("<meter value=" + this.happinessLevel + " min='-1' low='4' high='8' optimum='10' max='15'></meter>");
     $(".rested-meter").html("<meter value=" + this.restedLevel + " min='-1' low='3' high='8' optimum='10' max='15'></meter>");
     this.healthLevel = this.calcHealthLevel();
@@ -132,7 +153,7 @@ var Tamagotchi = {
     if (!this.isAlive()) {
       $(".alert").addClass("alert-danger");
       $(".alert-msg").text("Too late! Your Tamagotchi is DEAD!");
-      $(".show-message").html("<h6>&nbsp</h6><img class='flip-vertical photo-width' src='./img/char" + this.image + ".png' alt='Picture of character'>");
+      $(".show-message").html("<h6>&nbsp</h6><img class='flip-vertical photo-width' src='./img/char1.png' alt='Picture of character'>");
       $(".asleep-or-awake").html("<img src='./img/bird-asleep.png' class='tiny-photo-width'>");
       $("button#feed img").addClass("opaque")
       $("button#feed").off("click");

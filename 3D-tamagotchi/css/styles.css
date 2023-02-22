@@ -96,6 +96,30 @@ meter {
   height: 40px;
   width: 75%;
 }
+
+svg{
+  height: 100px;
+}
+
+.svg-max {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%)!important ; 
+
+  
+  }
+  
+
+.svg-optimum {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%)!important ;
+}
+.svg-high {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%)!important ;
+  }
+
+.svg-low {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%)!important ;
+    }
+
+
  
 input[type="range"] {
   display: inline;
